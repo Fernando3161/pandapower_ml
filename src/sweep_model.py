@@ -13,6 +13,7 @@ from src.calculate_pf import get_power_data, plot_power_data, run_power_flow
 from src.common import RESULTS_DIR
 from src.transform_split_data import get_data_for_training
 from src.config import N_FEATURES, N_SPLITS, STATUS
+from src.results_eval_heatmap import plot_heatmap
 
 logger = logging.getLogger()
 # set logging level as INFO 
@@ -42,7 +43,7 @@ def sweep_ml_model():
         list: List of results for each configuration.
     """
     plot_power_data()
-    
+    logging.info(f"Running the analysis for the {STATUS} configuration")
     config_list = []
 
     for n in range(6, N_FEATURES):
@@ -60,6 +61,8 @@ def sweep_ml_model():
     with open(result_filename, 'w') as f:
         json.dump(res_list, f)
     logging.info(f"Results saved to \n{result_filename}")
+
+    plot_heatmap(result_filename=result_filename)
     return res_list
     
 
