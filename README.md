@@ -34,13 +34,11 @@ To install and execute the `"pandapower_ml"` project, follow these steps:
 git clone https://github.com/Fernando3161/pandapower_ml.git
 ```
 
-
 2. Navigate to the project directory:
 
 ```
 cd pandapower_ml
 ```
-
 
 3. Install the required dependencies using `pip`:
 
@@ -52,17 +50,14 @@ pip install -r requirements.txt
 
 ```
 python main.py
-
 ```
 
 ## Results
 
 The analysis of the project indicates that the lowest errors in power line loading predictions are obtained when considering between 10 and 11 features of the data and using a training size of 80%.
-
-![MSE heatmap](https://github.com/Fernando3161/pandapower_ml/blob/main/data/heatmap.png)
+<img src="https://github.com/Fernando3161/pandapower_ml/blob/main/data/heatmap.png"  width="60%" height="60%">
 
 The values of test and prediction for several lines can be then compared:
-
 ![Test and Predicitons](https://github.com/Fernando3161/pandapower_ml/blob/main/data/Test-v-Prediction.png)
 
 ## Acknowledgments
@@ -73,7 +68,7 @@ We would like to express our gratitude to all the contributors and researchers w
 
 This project was created and developed by Fernando PV.
 
-For any questions or feedback, feel free to reach out to the author via email: fernando_pv@example.com.
+For any questions or feedback, feel free to reach out to the author via email: fernandopenaherrera@gmail.com.
 
 
 
